@@ -17,6 +17,7 @@ class StockViewSet(ModelViewSet):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+
     print(queryset)
     filter_fields = ['positions__product']
     search_fields = ['positions__product__title']
